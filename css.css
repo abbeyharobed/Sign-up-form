@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: cursive;
+}
+.container{
+    background-color: lightslategrey;
+    height: fit-content;
+    width: 400px;
+    max-width: 100%;
+    padding: 10px;
+}
+.header{
+    border-bottom: 1px dashed ;
+    padding: 10px 20px;
+    background-color: slategray;
+}
+.header h2{
+    margin: 0;
+    text-align:center ;
+}
+.form{
+    padding: 30px 40px ;
+    background-color: turquoise;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+   /* background-color: wheat;*/
+    position: relative;
+}
+.form-control label{
+    display: inline-block; /*margin wouldn't affect it, hence the inline block
+    that gives it attributes of the block element while it is still inline*/
+    margin-bottom: 5px;
+
+}
+.form-control input{
+    border: 2px solid white;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding:10px;
+    font-size: 14px;
+    font-family: inherit;
+}
+.form-control i{
+    position: absolute;
+   /* background-color: black;
+    border-radius: 100%;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    bottom: 25px;*/
+    color: black;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.form button{
+    padding: 5px;
+    border-radius: 3px;
+    display: block;
+    font-family: inherit;
+}
+
+/*SUCESS OR ERROR STYLING*/
+.form-control.success input{
+    border-color: lawngreen;
+}
+.form-control.error i.exclamation{
+    visibility: visible;
+    color: red;
+}
+.form-control.success i.check{
+    visibility: visible;
+    color: lawngreen;
+}
+.form-control.error input{
+    border-color: red;
+}
+.form-control.error small{
+    visibility: visible;
+    color: red;
+}
+.form-control.success small{
+    visibility: visible;
+    color: green;
+}
+#UserName.invalid{
+
+    display: none;
+}
